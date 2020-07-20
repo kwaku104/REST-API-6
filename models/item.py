@@ -15,10 +15,10 @@ class ItemModel(db.Model):
         self.name = name
         self.price = price
         self.store_id = store_id
-        self.id = id
+        # self.id = id
 
     def json(self):
-        return {'name': self.name, 'id': self.id, 'price': self.price}
+        return {'name': self.name, 'price': self.price}
 
     @classmethod
     def find_by_name(cls, name):
